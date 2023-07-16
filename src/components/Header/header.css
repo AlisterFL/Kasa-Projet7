@@ -1,0 +1,42 @@
+/* header.css */
+
+.header-container {
+max-width: 1440px;
+margin: auto;
+padding: 20px 100px;
+
+display: flex;
+justify-content: space-between;
+}
+
+.header-logo img{
+    width: 210px;
+    height: 68px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    
+}
+
+.header-link {
+    text-decoration: none;
+    margin-left: 3rem;
+    color: #FF6060;
+    transition: color 0.3s;
+}
+
+.header-link:hover {
+    color: #e35e5e;
+
+}
+.header-link.active {
+    border-bottom: 2px solid #FF6060;
+}
+

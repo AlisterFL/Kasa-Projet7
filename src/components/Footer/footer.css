@@ -1,0 +1,24 @@
+.footer-container {
+    background-color: black;
+    height: 209px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    color:white;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+
+}
