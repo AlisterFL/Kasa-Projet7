@@ -9,7 +9,7 @@ function Footer() {
         <Link to="/" className="footer-logo">
           <img className="logo-svg" src={logo} alt="Logo" />
         </Link>
-        <h1>© 2020 Kasa. All rights reserved</h1>
+        <h1 className='desc-footer'>© 2020 Kasa. All rights reserved</h1>
       </footer>
     );
 

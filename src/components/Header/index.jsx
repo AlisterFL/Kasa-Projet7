@@ -18,7 +18,7 @@ function Header() {
       </Link>
       <nav>
         <Link to="/" className={activeLinkClass('/')}>Accueil</Link>
-        <Link to="/freelances" className={activeLinkClass('/freelances')}>A propos</Link>
+        <Link to="/a-propos" className={activeLinkClass('/a-propos')}>A propos</Link>
       </nav>
     </header>
   );
