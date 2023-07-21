@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
-import './aboutUs.css'
+import './aboutUs.css';
 
 function BoxWithDescription({ title, description }) {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggleDescription = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    return (
-      <div className={`box ${isOpen ? 'open' : ''}`} onClick={toggleDescription}>
-        <div className="title">{title}</div>
-        {isOpen && <div className="description">{description}</div>}
-        <div className={`arrow ${isOpen ? 'open' : ''}`}> ^ </div>
-      </div>
-    );
-  }
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
+  const handleToggle = () => {
+    setIsAnimating(true);
+    setIsOpen(!isOpen);
+    setTimeout(() => {
+      setIsAnimating(false);
+    }, 300); // Temps de la transition en millisecondes
+  };
+
+  return (
+    <div
+      className={`box ${isOpen ? 'open' : ''} ${isAnimating ? 'animating' : ''}`}
+      onClick={handleToggle}
+    >
+      <div className="title">{title}</div>
+      {isOpen && <div className="description">{description}</div>}
+      <div className={`arrow ${isOpen ? 'open' : ''}`}> ^ </div>
+    </div>
+  );
+}
 
 function Home() {
+
     return (
      <div className="Box">
       <BoxWithDescription

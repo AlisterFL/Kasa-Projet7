@@ -10,12 +10,14 @@ import Error from './components/Error';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import Logement from './pages/Logement';
+import CarouselPic from './components/Carousel'
 
 import homeData from './data/homeData.json';
 
 import './index.css';
 
 const ids = homeData.map((item) => item.id);
+console.log(ids)
 
 function HomePage() {
   return (
@@ -40,9 +42,18 @@ function LogementWrapper() {
   console.log(id)
 
   if (ids.includes(id)) { // Test validité ID
-    return <Logement />;
+    return (
+      <div className='midSection'>
+        <CarouselPic />
+        <Logement />
+      </div>
+    )
   } else {
-    return <Error />;
+    return (
+      <div className='midSection'>
+        <Error />;
+      </div>
+    )
   }
 }
 

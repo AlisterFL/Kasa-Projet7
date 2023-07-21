@@ -1,0 +1,38 @@
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    width: 1240px;
+    height: 415px;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+  }
+  
+  .left-arrow {
+    left: 10px;
+  }
+  
+  .right-arrow {
+    right: 10px;
+  }
+  
+  .carousel-image.right {
+    transform: translateX(100%);
+  }
+  
+  .carousel-image.left {
+    transform: translateX(-100%);
+  }
+  

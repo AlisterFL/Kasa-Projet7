@@ -1,47 +1,24 @@
 .box {
-    background-color: #ff6060;
-    width: 80%;
-    margin: 10px auto;
+    margin: 25px auto;
     color: white;
-    padding: 16px;
+    width: 85%;
     border-radius: 8px;
-    position: relative;
     cursor: pointer;
-    transition: background-color 0.3s, margin-bottom 0.3s;
+    position: relative;
+    overflow: hidden;
+    max-height: 60px;
   }
   
-  .box.open {
-    background-color: #ff6060;
-    margin-bottom: 80px;
+  .box.animating {
+    transition: max-height 1s ease-out;
   }
   
   .title {
-    color: white;
-    font-weight: bold;
-  }
-  
-  .description {
-    background-color: #f6f6f6;
-    color: #ff6060;
-    padding: 8px;
-    border-radius: 0 0 8px 8px;
-    position: absolute;
-    top: 100%; /* Place la description juste en dessous de la boîte du titre */
-    left: 0;
-    right: 0;
-    display: none; /* Cache la description par défaut */
-    visibility: hidden; /* Cache la description par défaut */
-    opacity: 0; /* Cache la description par défaut */
-    transition: opacity 0.3s, visibility 0.3s, transform 0.3s; /* Ajoutez 'transform' à la transition */
-    transform-origin: top center; /* Définit le point d'origine de la transformation (pivot) */
-    transform: scaleY(0); /* Masque la boîte de description par défaut */
-  }
-  
-  .box.open .description {
-    display: block; /* Affiche la description quand la boîte est ouverte */
-    visibility: visible; /* Affiche la description quand la boîte est ouverte */
-    opacity: 1; /* Affiche la description quand la boîte est ouverte */
-    transform: scaleY(1); /* Applique une transformation pour faire apparaître la boîte de description en dessous */
+    font-size: 24px;
+    font-weight: 500;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ff6060;
   }
   
   .arrow {
@@ -49,7 +26,7 @@
     font-weight: 700;
     position: absolute;
     top: 10px;
-    right: 2%;
+    right: 16px;
     transition: transform 0.3s;
   }
   
@@ -57,7 +34,17 @@
     transform: rotate(180deg);
   }
   
-  .spacer {
-    height: 0;
+  .description {
+    background-color: #f6f6f6;
+    color: #ff6060;
+    padding: 8px;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    padding-top: 10px;
+    overflow: hidden;
+  }
+  
+  .box.open {
+    max-height: 500px; /* Hauteur maximale lorsque la boîte est ouverte */
   }
   
