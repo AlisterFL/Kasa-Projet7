@@ -1,29 +1,6 @@
 import React, { useState } from 'react';
 import './aboutUs.css';
-
-function BoxWithDescription({ title, description }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const handleToggle = () => {
-    setIsAnimating(true);
-    setIsOpen(!isOpen);
-    setTimeout(() => {
-      setIsAnimating(false);
-    }, 300); // Temps de la transition en millisecondes
-  };
-
-  return (
-    <div
-      className={`box ${isOpen ? 'open' : ''} ${isAnimating ? 'animating' : ''}`}
-      onClick={handleToggle}
-    >
-      <div className="title">{title}</div>
-      {isOpen && <div className="description">{description}</div>}
-      <div className={`arrow ${isOpen ? 'open' : ''}`}> ^ </div>
-    </div>
-  );
-}
+import BoxWithDescription from '../../tools/box'
 
 function Home() {
 
@@ -32,6 +9,7 @@ function Home() {
       <BoxWithDescription
         title="Fiabilité"
         description="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."
+        initialOpen ={true}
       />
       <BoxWithDescription
         title="Respect"

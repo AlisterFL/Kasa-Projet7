@@ -22,3 +22,7 @@ body{
   width: 90%;
   margin: 20px auto;
 }
+
+:root {
+  --pink: #ff6060;
+}

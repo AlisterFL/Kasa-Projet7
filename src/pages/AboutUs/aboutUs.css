@@ -7,9 +7,6 @@
     position: relative;
     overflow: hidden;
     max-height: 60px;
-  }
-  
-  .box.animating {
     transition: max-height 1s ease-out;
   }
   
@@ -18,7 +15,7 @@
     font-weight: 500;
     padding: 15px;
     border-radius: 10px;
-    background-color: #ff6060;
+    background-color: var(--pink);
   }
   
   .arrow {
@@ -27,24 +24,30 @@
     position: absolute;
     top: 10px;
     right: 16px;
-    transition: transform 0.3s;
+    transition: transform 0.3s, top 0.3s;
   }
   
   .arrow.open {
     transform: rotate(180deg);
+    top: 15px;
+    
   }
   
   .description {
     background-color: #f6f6f6;
-    color: #ff6060;
+    color: var(--pink);
     padding: 8px;
     border-radius: 0 0 8px 8px;
     position: relative;
     padding-top: 10px;
     overflow: hidden;
+    position: relative;
+    top: -10px;
+    padding-top: 20px;
+    z-index: -99;
   }
   
   .box.open {
-    max-height: 500px; /* Hauteur maximale lorsque la boîte est ouverte */
+    max-height: 500px;
   }
   

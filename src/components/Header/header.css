@@ -29,7 +29,7 @@ nav {
 .header-link {
     text-decoration: none;
     margin-left: 3rem;
-    color: #FF6060;
+    color: var(--pink);
     transition: color 0.3s;
 }
 
@@ -38,6 +38,6 @@ nav {
 
 }
 .header-link.active {
-    border-bottom: 2px solid #FF6060;
+    border-bottom: 2px solid var(--pink);
 }
 
