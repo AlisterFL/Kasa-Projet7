@@ -1,5 +1,5 @@
 .home-ul {
-    width: 1240px;
+    width: 100%;
     margin: 50px auto;
     padding: 40px 0;
     background-color: #f6f6f6;
@@ -9,6 +9,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     row-gap: 50px;
+    column-gap: 14px;
   }
   
   .home-list {
@@ -33,18 +34,47 @@
   .home-list p {
     position: absolute;
     display: flex;
-    top: 280px; /* Ajuster la valeur pour déplacer le texte vers le bas de l'image */
+    top: 170px; /* Déplacez le dégradé vers le milieu de l'image */
     left: 0;
     width: 340px;
-    height: 60px;
-    background-color: rgba(255, 96, 96, 0.8);
+    height: 170px; /* Ajuster la hauteur pour qu'elle atteigne le bas de l'image */
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     color: white;
     margin: 0;
     font-size: 18px;
     text-align: center;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* Aligner le texte vers le bas */
     box-sizing: border-box;
     padding: 10px;
+}
+
+@media (max-width: 771px) {
+  .home-ul{
+    row-gap: 15px;
+    padding: 15px 0;
+    margin: 0;
+    background-color: white;
   }
-  
+
+  .home-list {
+    height: 225px;
+    width: 100%;
+
+  }
+
+  .home-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .home-list p{
+    top: 54px;
+    width: 100%;
+    text-align: left;
+    padding-left: 10%;
+    justify-content: flex-start;
+  }
+
+}

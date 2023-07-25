@@ -28,28 +28,31 @@ function HomeInformation({ data }) {
         <div className="bloc-info">
             <div className="first-bloc">
 
+
                 <div className="title-bloc">
                     <h1> {data.title} </h1>
                     <h3> {data.location} </h3>
-                </div>
-                <div className="host-bloc">
-                    <div className="nameHost">
-                        <h4> {nameHost[0]} </h4>
-                        <h4> {nameHost[1]}</h4>
+                    <div className="tags">
+                        <ul>{tagsList}</ul>
                     </div>
-                    <img src= {data.host.picture} alt="profil picture" />
+                </div>
+                <div className="host-rating-bloc">
+
+                    <div className="host-bloc">
+                        <div className="nameHost">
+                            <h4> {nameHost[0]} </h4>
+                            <h4> {nameHost[1]}</h4>
+                        </div>
+                        <img src= {data.host.picture} alt="profil picture" />
+                    </div>
+                    <div className="rating">
+                        {stars}
+                    </div>
                 </div>
 
             </div>
+            
             <div className="second-bloc">
-                <div className="tags">
-                    <ul>{tagsList}</ul>
-                </div>
-                <div className="rating">
-                    {stars}
-                </div>
-            </div>
-            <div className="third-bloc">
             <BoxWithDescription 
                 className="description-bloc"
                 title="Description"

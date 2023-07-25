@@ -27,3 +27,12 @@
     text-align: center;
 
 }
+
+@media (max-width: 600px) {
+
+    .desc-footer{
+        font-size: 12px
+    }
+
+}
+

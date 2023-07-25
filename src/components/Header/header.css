@@ -41,3 +41,22 @@ nav {
     border-bottom: 2px solid var(--pink);
 }
 
+@media (max-width: 600px) {
+
+    .header-logo img{
+        width: 145px;
+        height: 47px;
+    }
+
+    nav {
+        font-size: 12px;
+        font-weight: 500;
+
+        
+    }
+
+    .header-link {
+        margin-left: 1rem;
+    }
+
+}

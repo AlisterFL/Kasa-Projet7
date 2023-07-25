@@ -9,9 +9,8 @@
     display: flex;
     justify-content: space-between;
 
-    height: 77px;
     padding-top: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
 }
 
 .title-bloc h1{
@@ -31,10 +30,66 @@
     margin: 0;
 }
 
+.tags{
+    margin: 20px 0
+}
+
+.tags ul{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ .tags ul li{
+    background-color: var(--pink);
+    width: 155px;
+    height: 25px;
+    color: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tags ul{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ .tags ul li{
+    background-color: var(--pink);
+    width: 155px;
+    height: 25px;
+    color: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Host rating blocs */
+
+.host-rating-bloc{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
 .host-bloc{
     display: flex;
     align-items: center;
-
+    justify-content: flex-end;
 }
 
 .host-bloc .nameHost{
@@ -72,48 +127,136 @@
     color:#E3E3E3
 }
 
-/* Tags et note */
-
-.second-bloc{
-    display: flex;
-    justify-content: space-between;
+.rating {
+    width: 210px;
 }
 
-.second-bloc .tags ul{
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.second-bloc .tags ul li{
-    background-color: var(--pink);
-    width: 155px;
-    height: 25px;
-    color: white;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-
-.second-bloc .rating svg{
+.rating svg{
     width: 30px;
     height: 30px;
     padding-left: 10px;
 }
 
-.third-bloc{
+/* Second bloc */
+
+
+.second-bloc{
     display: flex;
     gap: 100px;
 }
+.second-bloc .description{
+    min-height: 150px;
+}
 
-.third-bloc .equipment-bloc .description{
+.second-bloc .equipment-bloc .description{
     display: flex;
     flex-direction: column;
+    min-height: 150px;
+    row-gap: 4px;
+    line-height: 27px;
+}
+
+.second-bloc .equipment-bloc{
+    margin: 0;
+}
+
+.second-bloc .description-bloc{
+    margin: 0;
+}
+
+
+@media (max-width: 840px) {
+
+    .first-bloc{
+        flex-direction: column;
+    }
+
+    .title-bloc h1{
+
+        font-size: 30px;
+    }
+
+    .host-rating-bloc{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .second-bloc{
+        gap: 20px;
+    }
+
+}
+
+
+@media (max-width: 840px) {
+
+    .first-bloc{
+        flex-direction: column;
+    }
+
+    .title-bloc h1{
+
+        font-size: 30px;
+    }
+
+    .host-rating-bloc{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .second-bloc{
+        flex-direction: column;
+    }
+
+    .second-bloc .box{
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .first-bloc{
+        padding-top: 10px;
+    }
+
+    .title-bloc h1{
+
+        font-size: 18px;
+    }
+    .title-bloc h3{
+
+        font-size: 14px;
+    }
+
+    .tags ul li{
+        font-size: 10px;
+    }
+
+    .rating svg{
+        width: 16px;
+        height: 16px;
+        padding-left: 5px;
+    }
+
+    .host-bloc img{
+        width: 32px;
+        height: 32px;
+    }
+
+    .host-bloc h4{
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
+    /*Second bloc*/
+
+    .second-bloc .box .title{
+        font-size: 14px;
+    }
+    .second-bloc .box .description{
+        font-size: 14px;
+    }
 }

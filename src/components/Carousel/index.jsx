@@ -18,16 +18,12 @@ export const Carousel = ({ data}) => {
 
     return (
         <div className="carousel">
-            <AiOutlineLeft className="arrow arrow-left" onClick={previousSlide}/>
-            {data.map((item, idx) =>{
-            return <img src={item} key={idx} className= {slide === idx ? "slide" : "slide slide-hidden"}/>
+            {data.length > 1 && <AiOutlineLeft className="arrow arrow-left" onClick={previousSlide} />}
+            {data.map((item, idx) => {
+                return <img src={item} key={idx} className={slide === idx ? "slide" : "slide slide-hidden"} />
             })}
-            <AiOutlineRight className="arrow arrow-right" onClick={nextSlide}/>
-            <span className="indicators">
-                {data.map((_, idx)=> {
-                    return <button key={idx} onClick={() => setSlide(idx)} className= {slide === idx ? "indicator" : "indicator indicator-inactive"} ></button>
-                })}
-            </span>
+            {data.length > 1 && <AiOutlineRight className="arrow arrow-right" onClick={nextSlide} />}
+            {data.length > 1 && <span className="indicators">{slide + 1}/{data.length}</span>}
         </div>
     )
 }

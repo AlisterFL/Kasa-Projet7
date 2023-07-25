@@ -26,3 +26,9 @@ body{
 :root {
   --pink: #ff6060;
 }
+
+@media (max-width: 600px){
+  .midSection{
+    margin: 0 auto;
+  }
+}

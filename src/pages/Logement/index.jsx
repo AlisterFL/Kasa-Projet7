@@ -13,8 +13,7 @@ function Logement() {
     return (
         <div>
             <Carousel data= {homeData.pictures}/>
-            <HomeInformation data= {homeData}/>
-            <h2> Logement id : {id} </h2>  
+            <HomeInformation data= {homeData}/> 
 
         </div>
     )
