@@ -59,7 +59,9 @@ function HomeInformation({ data }) {
             <BoxWithDescription 
             className="equipment-bloc"
                 title="Équipements"
-                description= {data.equipments}
+                description= {data.equipments.map((value,index) => (
+                    <li key={index}>{value}</li>
+                ))}
                 initialOpen={true}
             />
             </div>
