@@ -41,3 +41,24 @@ html, body, #root {
     font-weight: 500;
 
 }
+
+@media (max-width: 974px) {
+
+    .Error-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .Error h1{
+        font-size: 100px;
+    }
+
+    .Error p{
+        font-size: 25px;;
+    }
+
+    .Redirect-link{
+        font-size: 14px;
+    }
+  }
